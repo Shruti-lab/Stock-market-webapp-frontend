@@ -1,70 +1,71 @@
-# React + TypeScript + Vite
+# Stock Market Webapp Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, TypeScript-based frontend for a stock market web application.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Built with **React** and **TypeScript**
+- Organized component structure
+- State management (likely using Redux or similar, see `/state`, `/store`)
+- Modular theme support (`/theme`)
+- Asset organization (`/assets`)
+- View-based routing (`/views`)
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> *Note: This is a partial listing; see the [src directory on GitHub](https://github.com/Shruti-lab/Stock-market-webapp-frontend/tree/main/src) for full details.*
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+  ├── App.css
+  ├── App.tsx
+  ├── assets/
+  ├── components/
+  ├── index.css
+  ├── main.tsx
+  ├── state/
+  ├── store/
+  ├── theme/
+  ├── views/
+  └── vite-env.d.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React
+- TypeScript
+- [Vite](https://vitejs.dev/) (inferred from vite-env.d.ts)
+- CSS
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Stock-market-webapp-frontend
+## 🏁 Getting Started
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+2. **Start development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+3. **Build for production:**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This repository does not currently specify a license.
+
+---
+
+*This project is part of Stock Market Webapp. [View the full project repository on GitHub.](https://github.com/Shruti-lab/Stock-market-webapp-microservices)*
